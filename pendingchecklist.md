@@ -1,0 +1,2 @@
+ - Automate full instalation (push configs to directories)
+ - Add fonts with shell script
