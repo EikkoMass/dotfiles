@@ -1,4 +1,5 @@
-[Alt + F4] Close window
-[Meta + T] Opens Terminal
-[Meta + ,] Show running windows (rofi)
-[Meta + .] Launch new programs or simple commands (rofi)
+ - [Alt + F4] Close window
+ - [Meta + T] Opens Terminal
+ - [Meta + ,] Show running windows (rofi)
+ - [Meta + .] Launch new programs or simple commands (rofi)
+ - [Meta + p] Lauch Flameshot (print screen app)

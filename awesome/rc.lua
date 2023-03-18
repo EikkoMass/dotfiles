@@ -328,6 +328,8 @@ globalkeys = gears.table.join(
               {description = "run prompt (rofi)", group = "launcher"}),
     awful.key({ modkey }, ",",   function () awful.util.spawn("rofi -show window") end,
               {description = "show windows (rofi)", group = "launcher"}),
+    awful.key({ modkey }, "p",   function () awful.util.spawn("flameshot gui") end,
+              {description = "takes screenshot (flameshot)", group = "launcher"}),
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
@@ -337,10 +339,10 @@ globalkeys = gears.table.join(
                     history_path = awful.util.get_cache_dir() .. "/history_eval"
                   }
               end,
-              {description = "lua execute prompt", group = "awesome"}),
+              {description = "lua execute prompt", group = "awesome"})
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+ --  , awful.key({ modkey }, "p", function() menubar.show() end,
+ --             {description = "show the menubar", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
