@@ -1,6 +1,6 @@
 # still on development, not completed yet
 
-sudo pacman -Syu git python python3 wget curl vlc kitty gedit meson ninja nautilus arandr cmake htop neofetch lightdm lightdm-webkit2-greeter flameshot krita gimp
+sudo pacman -Syu git w3m fuse2 imagemagick python python3 wget curl vlc kitty gedit meson ninja nautilus arandr cmake htop neofetch lightdm lightdm-webkit2-greeter flameshot krita gimp
 
 # used to fresh install
 # mkdir ~/Images

@@ -61,8 +61,8 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    -- awful.layout.suit.floating,
     awful.layout.suit.tile,
+    -- awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -288,7 +288,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey,           }, "t", function () awful.spawn(terminal) end,
-              {description = "open a terminal (custom)", group = "launcher"}),
+              {description = "open a terminal", group = "custom"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
@@ -325,11 +325,13 @@ globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ modkey },            ".",     function () awful.util.spawn("rofi -show run") end,
-              {description = "run prompt (rofi)", group = "launcher"}),
+              {description = "run prompt (rofi)", group = "custom"}),
     awful.key({ modkey }, ",",   function () awful.util.spawn("rofi -show window") end,
-              {description = "show windows (rofi)", group = "launcher"}),
+              {description = "show windows (rofi)", group = "custom"}),
     awful.key({ modkey }, "p",   function () awful.util.spawn("flameshot gui") end,
-              {description = "takes screenshot (flameshot)", group = "launcher"}),
+              {description = "takes screenshot (flameshot)", group = "custom"}),
+    awful.key({ modkey }, "Delete",   function () awful.util.spawn("dm-tool lock") end,
+              {description = "lock the computer (lightdm)", group = "custom"}),
     awful.key({ modkey }, "x",
               function ()
                   awful.prompt.run {
@@ -355,7 +357,7 @@ clientkeys = gears.table.join(
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ "Mod1" }, "F4", function (c) c:kill()                         end,
-              {description = "close (custom)", group = "client"}),
+              {description = "close", group = "custom"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end,
@@ -498,6 +500,7 @@ awful.rules.rules = {
         -- and the name shown there might not match defined rules here.
         name = {
           "Event Tester",  -- xev.
+          "Picture in picture",
         },
         role = {
           "AlarmWindow",  -- Thunderbird's calendar.
@@ -574,7 +577,7 @@ end)
 
 --Custom config :p
 
-beautiful.useless_gap=10
+beautiful.useless_gap=8
 
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -590,5 +593,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 awful.spawn.with_shell("picom --experimental-backends --backend glx --xrender-sync-fence --config $HOME/.config/picom/p.conf -b")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("polybar")
+awful.spawn.with_shell("$HOME/.config/polybar/launch.sh")
 -- }}}
+

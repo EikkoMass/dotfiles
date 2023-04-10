@@ -1,5 +1,5 @@
 picom -> .config/picom/
-polybar -> /etc/polybar/
+polybar -> .config/polybar/
 kitty -> .config/kitty/
 lightdm -> /etc/lightdm/
-awesome -> [/etc/xdg/awesome/rc.lua] OR [.config/awesome/ (recommended)]
+awesome -> .config/awesome/
