@@ -3,6 +3,7 @@
 pcall(require, "luarocks.loader")
 
 -- Standard awesome library
+
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
@@ -96,6 +97,16 @@ beautiful.menu_width=150
 beautiful.menu_bg_normal="#06050a"
 beautiful.menu_bg_focus="#63177b"
 beautiful.menu_fg_normal="#fbe6db"
+
+beautiful.border_focus = "#7a53b0"
+beautiful.border_normal = "#4d4459"
+beautiful.border_width = 2
+
+
+beautiful.menu_font = "JetBrains Nerd Font"
+beautiful.menu_bg_normal = "#675580"
+
+
 -- beautiful.menu_fg_focus=""
 
 
@@ -103,6 +114,7 @@ mymainmenu = awful.menu({ items = { { "Awesome", myawesomemenu, awesome_icon },
                                     { "New Terminal", terminal }
                                   }
                         })
+                        
 
 mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
@@ -466,7 +478,7 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = beautiful.border_width,
+      properties = { -- border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
                      focus = awful.client.focus.filter,
                      raise = true,
@@ -577,7 +589,7 @@ end)
 
 --Custom config :p
 
-beautiful.useless_gap=8
+beautiful.useless_gap=6
 
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -595,4 +607,31 @@ awful.spawn.with_shell("picom --experimental-backends --backend glx --xrender-sy
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("$HOME/.config/polybar/launch.sh")
 -- }}}
+
+-- Notification Theme
+
+beautiful.notification_font = "JetBrains Nerd Font"
+
+beautiful.notification_bg = "#141414"
+beautiful.notification_border_color = "#141414"
+
+beautiful.notification_border_width = 0
+
+beautiful.notification_width = 350
+beautiful.notification_max_width = 500
+
+beautiful.notification_height = 120
+beautiful.notification_max_height = 270
+
+beautiful.notification_icon_size = 24
+
+beautiful.notification_opacity = 10
+
+beautiful.notification_shape = function(cr, w, h)
+    gears.shape.rounded_rect(cr, w, h, 10)
+end
+
+-- Test notification (uncomment to test the theme)
+-- naughty.notify({ title = "Notification!", text = "Such, Wow... An Notification!", timeout = 0 })
+
 
