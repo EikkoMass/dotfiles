@@ -10,7 +10,7 @@ makepkg -si
 
 # Install dependencies
 
-sudo pacman -Sy linux-lts-headers qt5-wayland libva curl wget git neofetch nvtop htop wlroots jq grim slurp rust rustup w3m fuse2 imagemagick docker docker-compose nemo libnvidia-egl-wayland egl-wayland sof-firmware pavucontrol steam cmake gimp python python3 krita bat
+sudo pacman -Sy linux-lts-headers qt5-wayland libva curl wget git neofetch nvtop htop wlroots jq grim slurp rust rustup w3m fuse2 imagemagick docker docker-compose nemo libnvidia-egl-wayland egl-wayland sof-firmware pavucontrol steam cmake gimp python python3 krita bat alsa-utils
 
 # Install contrib (tools adapted to hyprland)
 
