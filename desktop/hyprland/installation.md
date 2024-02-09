@@ -23,3 +23,15 @@ sudo make install
 
 sudo pacman -Sy otf-font-awesome noto-fonts-emoji noto-fonts adobe-source-han-sans-otc-fonts noto-fonts-cjk ttf-firacode-nerd otf-firamono-nerd
 
+# Spotify
+
+yay -Sy spotify
+
+Used the AUR to use spotify-flags.conf
+
+## Spicetify (requires unzip)
+
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+
+sudo chmod a+wr /opt/spotify
+sudo chmod a+wr /opt/spotify/Apps -R
