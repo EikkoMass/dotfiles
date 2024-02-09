@@ -21,4 +21,5 @@ sudo make install
 
 # Fonts
 
-sudo pacman -Sy otf-font-awesome noto-fonts-emoji noto-fonts adobe-source-han-sans-otc-fonts noto-fonts-cjk
+sudo pacman -Sy otf-font-awesome noto-fonts-emoji noto-fonts adobe-source-han-sans-otc-fonts noto-fonts-cjk ttf-firacode-nerd otf-firamono-nerd
+
