@@ -10,7 +10,7 @@ makepkg -si
 
 # Install dependencies
 
-sudo pacman -Sy linux-lts-headers qt5-wayland libva curl wget git neofetch nvtop htop wlroots jq grim slurp rust rustup w3m fuse2 imagemagick docker docker-compose nemo libnvidia-egl-wayland egl-wayland sof-firmware pavucontrol steam cmake gimp python python3 krita bat alsa-utils
+sudo pacman -Sy linux-lts-headers qt5-wayland libva curl wget git neofetch nvtop htop wlroots jq grim slurp rust rustup w3m fuse2 imagemagick docker docker-compose nemo libnvidia-egl-wayland egl-wayland sof-firmware pavucontrol steam cmake gimp python python3 krita bat alsa-utils yt-dlp
 
 # Install contrib (tools adapted to hyprland)
 
@@ -35,3 +35,14 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/inst
 
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
+
+## Bluetooth (still working on it)
+
+	made for btusb
+
+sudo pacman -Sy bluez bluez-utils
+
+sudo systemctl enable --now bluetooth.service
+
+sudo pacman -Sy blueman
+
