@@ -1,0 +1,23 @@
+[font]
+  normal = { family = "FiraCode Nerd Font", style = "Medium" }
+  offset = { x = 0, y = 2 }
+  size = 12.0
+
+[colors]
+  primary = { background = "#181818", foreground = "#f8f8f2" }
+  normal = { black = "#141414", red = "#ff5555", green = "#50fa7b", yellow = "#f1fa8c", blue = "#bd93f9", magenta = "#ff79c6", cyan = "#8be9fd", white = "#bbbbbb" }
+  bright = { black = "#44475a", red = "#ff6e6e", green = "#69ff94", yellow = "#ffffa5", blue = "#d6acff", magenta = "#ff92df", cyan = "#a4ffff", white = "#ffffff" }
+
+[window]
+  padding = { x = 20, y = 20 }
+  decorations = "Full"
+  opacity = 0.8
+  blur = true
+  startup_mode = "Windowed"
+  title = "Terminal"
+  dynamic_title = true
+
+[cursor]
+  style = { shape = "Beam", blinking = "Always" }
+  blink_interval = 1000
+  unfocused_hollow = false
