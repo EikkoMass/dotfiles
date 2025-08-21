@@ -21,3 +21,8 @@
   style = { shape = "Beam", blinking = "Always" }
   blink_interval = 1000
   unfocused_hollow = false
+
+[bell]
+  animation = "EaseOutCubic"
+  duration = 2000
+  color = "#942ec4"
